@@ -29,10 +29,10 @@
         "./*"
       ]
     },
-    "module": "CommonJS"
-    // "moduleResolution": "node"
-    ,
-    "moduleResolution": "node"
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
   },
   "include": [
     "next-env.d.ts",

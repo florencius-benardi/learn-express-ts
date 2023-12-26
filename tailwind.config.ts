@@ -13,7 +13,20 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        'clifford': '#da373d',
+        // 'blue': '#1fb6ff',
+        // 'purple': '#7e5bef',
+        // 'pink': '#ff49db',
+        // 'orange': '#ff7849',
+        // 'green': '#13ce66',
+        'yellow': '#ffc82c'
+      }
     },
+    container: {
+      center: true,
+      padding: '2rem',
+    }
   },
   plugins: [],
 }
