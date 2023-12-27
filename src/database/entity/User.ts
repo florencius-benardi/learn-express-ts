@@ -2,17 +2,34 @@ import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
 
 @Entity()
 export class User {
-
-    @PrimaryGeneratedColumn()
-    id: number
+    @Column()
+    @PrimaryGeneratedColumn('uuid')
+    'id': string
 
     @Column()
-    firstName: string
+    'userName': string
 
     @Column()
-    lastName: string
+    'firstName': string
 
     @Column()
-    age: number
+    'lastName': string
 
+    @Column()
+    'email': string
+
+    @Column()
+    'password': string
+
+    @Column()
+    'created_by_id': string
+
+    @Column()
+    'updated_by_id': string
+
+    @Column({ type: 'timestamp' })
+    'created_at': Date
+
+    @Column({ type: 'timestamp' })
+    'updated_at': Date
 }
