@@ -33,7 +33,7 @@ const handle = app.getRequestHandler();
         })
     })
 
-    server.listen(3000, () => {
+    server.listen(process.env.NODE_PORT, () => {
         console.log('> Ready on http://localhost:3000')
     })
 })()

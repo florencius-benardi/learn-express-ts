@@ -2,6 +2,7 @@
    "name": "next-express-ts",
    "version": "0.1.0",
    "private": true,
+   "type": "commonjs",
    "scripts": {
       "dev": "ts-node server-ssr.ts",
       "build": "next build",

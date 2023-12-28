@@ -1,19 +1,22 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext",
-      // "ES2022"
+      "es5",
+      "es6"
     ],
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./build",
+    "sourceMap": true,
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    // "module": "node16",
-    // "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmitHelpers": false,
@@ -24,21 +27,25 @@
         "name": "next"
       }
     ],
+    // "module": "node16",
+    // "moduleResolution": "Bundler",
     "paths": {
       "@/*": [
         "./*"
       ]
     },
-    "module": "esnext",
-    "moduleResolution": "node",
+    // "module": "esnext",
+    // "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "next.config.js"
   ],
   "exclude": [
     "node_modules"

@@ -1,0 +1,13 @@
+export const roles: string = 'roles',
+    ATTR_TABLE: string = 'roles',
+    ATTR_CHAR_DESCRIPTION: string = 'description',
+    ATTR_CHAR_ID: string = 'id',
+    ATTR_DATETIME_CREATED_AT: string = 'created_at',
+    ATTR_DATETIME_DELETED_AT: string = 'deleted_at',
+    ATTR_DATETIME_UPDATED_AT: string = 'updated_at',
+    ATTR_UUID_CREATED_BY: string = 'created_by_id',
+    ATTR_UUID_UPDATED_BY: string = 'updated_by_id',
+    ATTR_RELATION_UPDATED_BY: string = 'updated_by',
+    ATTR_RELATION_CREATED_BY: string = 'created_by',
+    ATTR_RELATION_MODULES: string = 'modules',
+    ATTR_RELATION_ORGANIZATION: string = 'organization'
