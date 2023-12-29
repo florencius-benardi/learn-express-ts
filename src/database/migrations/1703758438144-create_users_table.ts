@@ -106,5 +106,4 @@ export class CreateUsersTable1703758438144 implements MigrationInterface {
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.dropDatabase(ATTR_TABLE, true);
     }
-
 }

@@ -2,7 +2,7 @@ import bodyParser from 'body-parser'
 import compression from 'compression'
 import express, { Request, Response } from 'express'
 import next from 'next'
-import apiRoutes from './src/routes/api'
+import apiRoutes from './routes/api'
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })

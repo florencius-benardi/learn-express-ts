@@ -1,8 +1,10 @@
 import "reflect-metadata"
+import dotenv from 'dotenv';
 import { DataSource } from "typeorm"
 import { User } from "./entity/User"
 import { CreateUsersTable1703758438144 } from "./migrations/1703758438144-create_users_table"
 
+dotenv.config({ path: '.env' });
 
 export const AppDataSource = new DataSource({
     type: "postgres",
