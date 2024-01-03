@@ -2,7 +2,8 @@ import bodyParser from 'body-parser'
 import compression from 'compression'
 import express, { Request, Response } from 'express'
 import next from 'next'
-import apiRoutes from './routes/api'
+import apiRoutes from './backend/routes/api'
+import { createServer } from 'http'
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -24,7 +25,7 @@ const handle = app.getRequestHandler();
         return handle(req, res)
     })
 
-    server.use((error: any, req: Request, res: Response) => {
+    server.use((error: any, res: Response) => {
         const { statusCode, message, errors } = error
         res.status(statusCode || 500).json({
             status: false,
@@ -33,7 +34,10 @@ const handle = app.getRequestHandler();
         })
     })
 
-    server.listen(process.env.NODE_PORT, () => {
+    // Create an HTTP server instance using http.createServer
+    const httpServer = createServer(server);
+
+    httpServer.listen(process.env.NODE_PORT, () => {
         console.log('> Ready on http://localhost:' + process.env.NODE_PORT)
     })
 })()

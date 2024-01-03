@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    basePath: './src/frontend',
     output: 'export',
 
     // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
@@ -10,7 +11,7 @@ const nextConfig = {
 
     // Optional: Change the output directory `out` -> `dist`
     // distDir: 'dist',
-    
+
     experimental: {
         typedRoutes: true,
     },
